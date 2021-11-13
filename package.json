@@ -1,0 +1,36 @@
+{
+  "name": "healthme-project",
+  "version": "0.0.1",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.27.5",
+    "chokidar": "^3.5.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sass-bulk-importer": "^3.0.2",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.39.2",
+    "uuid": "^8.3.2"
+  },
+  "scripts": {
+    "test": "\u001b[A\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001bindex.html\u001b[B"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/EvaHorbenko/step-project-helthme.git"
+  },
+  "author": "bes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/EvaHorbenko/step-project-helthme/issues"
+  },
+  "homepage": "https://gitlab.com/EvaHorbenko/step-project-helthme#readme"
+}

@@ -1,0 +1,44 @@
+@import "./massages";
+@import "./cards";
+@import "./full-card";
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+.main {
+    min-height: calc(100vh - 100px);
+    height: 100%;
+    background: linear-gradient(145deg, rgba(208,228,242,1) 0%, rgba(244,194,245,1) 100%);
+}
+.login-button {
+    margin-right: 130px;
+    height: 50px;
+    width: 100px;
+    border-radius: 10%;
+    font-size: 20px;
+    border: 2px solid grey;
+}
+.buttons-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logout-button {
+    display: none;
+    height: 50px;
+    width: 100px;
+    border-radius: 10%;
+    font-size: 20px;
+    margin-left: 60px;
+    border: 2px solid grey;
+}
+.filter-bg-wrapper {
+    display: none;
+}
+.root {
+    display: none;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}

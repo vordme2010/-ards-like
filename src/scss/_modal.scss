@@ -1,0 +1,316 @@
+.modal-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #00000060;
+    z-index: 10;
+
+    &.hidden {
+        display: none;
+    }
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+
+    &-login {
+        width: 500px;
+        height: 400px;
+        background-color: $modal-background-color;
+
+        .input-wrapper {
+            height: calc(100% - 60px - 70px);
+        }
+
+        .modal-input {
+            width: 100%;
+            margin: 0;
+
+        }
+    }
+
+    &-card {
+        background-color: $modal-background-color;
+        width: 900px;
+        height: 500px;
+    }
+
+    &-full-visit-info {
+        background-color: #fff;
+    }
+
+    &-header {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 15px 15px 0 0;
+        position: relative;
+    }
+
+    &-title {
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+.input-wrapper {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 60px);
+    padding: 55px 40px;
+    position: relative;
+
+    &.card-input {
+        flex-direction: row;
+        padding: 0;
+        overflow: hidden;
+
+        & > :nth-child(n) {
+            width: 50%;
+            padding: 55px 40px;
+        }
+    }
+}
+
+.modal-input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px 40px 10px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.select-wrapper {
+    position: relative;
+    min-width: 100%;
+    display: inline-block;
+
+    &::after {
+        content: '\f107';
+        font-family: 'FontAwesome';
+        font-size: 22px;
+        color: $modal-icon-color;
+        position: absolute;
+        top: 21px;
+        right: 0;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    line-height: 1.4;
+
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+.option {
+    text-transform: capitalize;
+}
+
+.full-name {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .last-name {
+        width: 100%;
+    }
+
+    .first-name, .father-name {
+        width: calc(50% - 7.5px);
+    }
+}
+
+.patient {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(232,223,246,1) 5%, rgba(255,255,255,1) 45%, rgba(255,255,255,1) 55%, rgba(232,223,246,1) 95%);
+    }
+}
+
+.autorise-btn, .add-visit-btn {
+    position: absolute;
+    right: 40px;
+    bottom: 55px;
+    transform: translateY(50%);
+}
+
+.toggle-password-icon {
+    position: absolute;
+    bottom: 55px;
+    right: 40px;
+    padding: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: $modal-icon-color;
+    cursor: pointer;
+
+    &.far {
+        right: 41px;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+}
+
+.close-icon {
+    font-size: 22px;
+    color: $modal-icon-color;
+    transition: 200ms;
+
+    &:hover {
+        transform: scale(1.4);
+        transition: 200ms;
+        cursor: pointer;
+    }
+}
+
+.diseases-collection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+
+    .modal-input {
+        max-width: calc(100% - 40px);
+    }
+
+    .add-diseases-btn {
+        position: absolute;
+        height: fit-content;
+        bottom: 20px;
+        right: 5px;
+        background: none;
+        border: none;
+        z-index: 1;
+    }
+
+    .add-diseases-icon {
+        font-size: 22px;
+        color: $modal-icon-color;
+        transition: 200ms;
+    
+        &:hover {
+            transform: scale(1.4);
+            transition: 200ms;
+            cursor: pointer;
+        }
+    }
+}
+.variable-inputs {
+    overflow-y: scroll;
+    max-height: 185px;
+
+    .input-disease__wrapper {
+        width: 100%;
+        position: relative;
+
+        .remove-diseases-icon {
+            font-family: 'FontAwesome';
+            font-size: 22px;
+            color: $modal-icon-color;
+            position: absolute;
+            cursor: pointer;
+            top: 21px;
+            right: 32px;
+            transform: translate(-50%, -50%);
+            transition: 200ms;
+
+            &:hover {
+                right: 38px;
+                transition: 200ms;
+            }
+        }
+    }
+}
+
+.pressure, .body-mass-index, .age, .diseases-collection {
+    max-width: calc(100% - 10px);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: #e8b8f561;
+    border-radius: 9em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #e8b8f5;
+}
+
+.modal-full-visit-info {
+    
+    .diseases-collection {
+        position: relative;
+        max-height: 150px;
+        overflow-y: scroll;
+        
+        .add-diseases-btn {
+            position: absolute;
+            height: fit-content;
+            top: 10px;
+            right: 0px;
+            background: none;
+            border: none;
+            z-index: 1;
+        }
+    }
+    .diseases {
+        margin: 0;
+    }
+
+    .input-disease__wrapper {
+        position: relative;
+        width: 100%;
+    }
+
+    .remove-diseases-icon  {
+        font-family: 'FontAwesome';
+        font-size: 22px;
+        color: $modal-icon-color;
+        position: absolute;
+        cursor: pointer;
+        transition: 200ms;
+        top: 0;
+        right: 0;
+        
+        &:hover {
+            right: 5px;
+            transition: 200ms;
+        }
+    }
+}

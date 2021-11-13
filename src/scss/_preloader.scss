@@ -1,0 +1,47 @@
+.preloader {
+    position: absolute;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(145deg, rgba(208,228,242,1) 0%, rgba(244,194,245,1) 100%);
+
+    &--disabled {
+        opacity: 0;
+        transition: 2000ms;
+    }
+    &--none {
+        display: none;
+    }
+}
+
+
+.preloader__logo {
+    &--disabled {
+        height: 100px;
+        opacity: 0;
+        margin-bottom: 130px;
+    }
+    &--active {
+        transform: scale(3);
+        transition: 2000ms;
+        opacity: 1;
+    }
+}
+
+.preloader__title {
+    &--disabled {
+        opacity: 0;
+        font-size: 0;
+        color: #fff;
+        text-shadow: 0 1px 2px rgba(71, 71, 71, 0.568);
+    }
+    &--active {
+        transition: 1000ms;
+        opacity: 1;
+        font-size: 40px;
+    }
+}

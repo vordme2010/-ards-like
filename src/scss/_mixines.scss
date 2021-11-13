@@ -1,0 +1,19 @@
+@mixin card-client-name-after($color) {
+    content: " ";
+    position: absolute;
+    height: 100%;
+    width: 50px;
+    background: linear-gradient(125deg, $color 50%, rgba(255,255,255,1) 50%);
+    top: 0;
+    right: -48px;
+}
+
+@mixin card-btn-before($color) {
+    content: " ";
+    position: absolute;
+    height: 100%;
+    width: 50px;
+    background: linear-gradient(125deg, rgba(255,255,255,1) 50%, $color 50%);
+    top: 0;
+    left: -40px;
+}

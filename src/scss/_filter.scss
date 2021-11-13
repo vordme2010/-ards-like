@@ -1,0 +1,75 @@
+.filter-bg-wrapper {
+    background-color: rgba(242, 242, 242, 0.425);
+    padding-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(158, 158, 158, 0.603);
+}
+
+.filter-wrapper {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    width: 700px;
+    height: 70px;
+    padding-top: 30px;
+}
+
+.filter-input {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: 0;
+    font-size: 16px;
+    height: 40px;
+    text-transform: capitalize;
+    font-family: 'Nunito', sans-serif;
+
+    &.select {
+        min-width: 170px;
+    }
+}
+
+.filter-wrapper ::before {
+    font-weight: 700;
+}
+
+.filter-wrapper::before {
+    content: 'Фильтр:';
+    transform: translateY(calc(-50% - 5px));
+    font-weight: 700;
+}
+.filter-select-wrapper, .filter-input-wrapper {
+    position: relative;
+}
+
+.filter-select-wrapper::before, .filter-input-wrapper::before {
+    position: absolute;
+    top: -100%;
+    transform: translate(10px, 100%);
+}
+
+.filter-input-wrapper-name::before {
+    content: 'имя пациента';
+}
+.filter-select-wrapper {
+    position: relative;
+    display: inline-block;
+
+    &::after {
+        content: '\f107';
+        font-family: 'FontAwesome';
+        font-size: 22px;
+        color: $modal-icon-color;
+        position: absolute;
+        top: 21px;
+        right: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    &-status::before {
+        content: 'статус визита';
+    }
+
+    &-urgency::before {
+        content: 'срочность визита';
+    }
+}

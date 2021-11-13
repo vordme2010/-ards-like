@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./dist/img/healthMe-favicon.png"/>
+    <title>healthME</title>
+
+    <script src="https://kit.fontawesome.com/530c4910e5.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Nunito:wght@400;700&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/css/style.min.css">
+</head>
+<body>
+    <div class="js-preloader preloader">
+        <img src="./dist/img/healthMe-logo.png" alt="logo" class="js-logo preloader__logo preloader__logo--disabled">
+        <h2 class="js-preloader-title preloader__title preloader__title--disabled">Забота о вашем здоровье</h2>
+    </div>
+    <header class="header">
+        <div class="container">
+            <a href="#">
+                <img src="./dist/img/healthMe-logo.png" alt="logo" class="logo">
+            </a>
+            <div class="header__title">
+                <img src="./dist/img/helthMe-name.png" alt="name" class="logo-name">
+                <h1 class="title">.workingboard</h1>
+            </div>
+        
+            <div class="buttons-wrapper">
+                <button class="button card-button js-card-toggle-button">Создать визит</button>
+                <button class="button login-button js-login-toggle-button">Войти</button>
+                <button class="button logout-button js-login-toggle-button">Выйти</button>
+                <div class="modal-wrapper js-login-modal-wrapper hidden">
+                    <div class="modal modal-login">
+                        <div class="modal-header">
+                            <h2 class="modal-title">авторизация</h2>
+                            <h2 class="not-registered">Вы не зарегестрированы. <br> Пожалуйста зарегестрируйтесь и повторите попытку ещё раз!</h2>
+                            <button class="close-btn js-login-toggle-button"> <i class="close-icon fas fa-times"></i> </button>
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="text" class="modal-input modal-input-bracket login modal-input-login" placeholder="Введите свой логин">
+                            <div class="login-input-bracket"></div>
+                            <input type="password" class="modal-input modal-input-bracket password modal-input-password" placeholder="Введите свой пароль">
+                            <div class="password-input-bracket"></div>
+                            <i class="toggle-password-icon fas fa-eye-slash"></i> 
+                        </div>
+                        <button class="button autorise-btn js-login-submit-button">авторизироваться</button>
+                    </div>
+                </div>
+                <div class="modal-wrapper js-card-modal-wrapper hidden">
+                    <div class="modal modal-card">
+                        <div class="modal-header">
+                            <h2 class="modal-title">новый визит</h2>
+                            <button class="close-btn js-card-toggle-button"> <i class="close-icon fas fa-times"></i> </button>
+                        </div>
+                        <div class="input-wrapper card-input">
+                            <div class="doctor">
+                                <div class="select-wrapper">
+                                    <select class="modal-input select сard-input js-doctor-select" name="select">
+                                        <option class="option" value="choose" selected disabled>Виберите врача</option>
+                                        <option class="option" value="therapist">Терапевт</option>
+                                        <option class="option" value="dentist">Стоматолог</option>
+                                        <option class="option" value="cardiologist">Кардиолог</option>
+                                    </select>
+                                </div>
+                                <input type="text" class="modal-input purpose сard-input js-purpose-input" placeholder="Укажите цель визита">
+                                <textarea style="resize: none;" class="modal-input сard-input description js-description-input" placeholder="Краткое описание визита" rows="3"></textarea>
+                                <div class="select-wrapper">
+                                    <select class="modal-input сard-input select js-urgency-input" name="select">
+                                        <option class="option" value="choose" selected disabled>Виберите срочность</option>
+                                        <option class="option" value="regular">обычная</option>
+                                        <option class="option" value="priority">приоритетная</option>
+                                        <option class="option" value="urgent">неотложная</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="patient">
+                                <div class="full-name">
+                                    <input type="text" class="modal-input сard-input last-name js-last-name-input" placeholder="Фамилия">
+                                    <input type="text" class="modal-input сard-input first-name js-first-name-input" placeholder="Имя">
+                                    <input type="text" class="modal-input сard-input father-name js-father-name-input" placeholder="Отчество">
+                                </div>
+                                <div class="variable-inputs"></div>
+                            </div>
+                        </div>
+                        <button class="button add-visit-btn js-card-submit-button">добавить визит</button>
+                        <p class="empty-fields-message">поля не заполнены или заполнены неверно !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="filter-bg-wrapper">
+            <div class="filter-wrapper">
+                <div class="filter-input-wrapper filter-input-wrapper-name">
+                    <input type="text" class="filter-input filter-name" style="text-transform: none;" placeholder="введите имя">
+                </div>
+                <div class="filter-select-wrapper filter-select-wrapper-status">
+                    <select class="filter-input select filter-status" name="select">
+                        <option class="filter-option" value="all" selected>все</option>
+                        <option class="filter-option" value="active">предстоящий</option>
+                        <option class="filter-option" value="done">прошедший</option>
+                    </select>
+                </div>
+                <div class="filter-select-wrapper filter-select-wrapper-urgency">
+                    <select class="filter-input select filter-urgency" name="select">
+                        <option class="filter-option" value="all" selected>все</option>
+                        <option class="filter-option" value="regular">обычная</option>
+                        <option class="filter-option" value="priority">приоритетная</option>
+                        <option class="filter-option" value="urgent">неотложная</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="massage-container">
+            <div class="js-massage massage massage-2">Чтобы начать работу с <strong class="massage__strong-text">.workingboard</strong> войдите в свою учётную запись.</div>            
+            <div class="js-massage massage massage-1">Рабочая область доступна только авторизированным сотрудникам. Чтобы увидеть записи на приёмы к врачам или создать новый приём, вам нужно осуществить авторизацию.</div>
+        </div>
+        <div class="js-massage massage massage-1-logout">Рабочая область доступна только авторизированным сотрудникам. Чтобы увидеть записи на приёмы к врачам или создать новый приём, вам нужно осуществить авторизацию.</div>
+        <div class="modal-wrapper js-full-visit-info-modal-wrapper hidden">
+            <div class="modal modal-full-visit-info full-card"></div>
+        </div>
+        <div class="root">
+            
+        </div>
+    </main>
+
+
+    <script src="./src/script/wait-fuction.js"></script>
+    <script src="./src/script/preloader.js"></script>
+    <script src="./src/script/massages.js"></script>
+    <script src="./src/script/server.js"></script>
+    
+    <script src="./src/script/visit.js"></script>
+    <script src="./src/script/visit-therapist.js"></script>
+    <script src="./src/script/visit-dentist.js"></script>
+    <script src="./src/script/visit-cardiologist.js"></script>
+    <script src="./src/script/validator.js"></script>
+    <script src="./src/script/modal.js"></script>
+    <script src="./src/script/login-modal.js"></script>
+    <script src="./src/script/card-modal.js"></script>
+    <script src="./src/script/full-visit-info-modal.js"></script>
+    <script src="./src/script/visits-collection.js"></script>
+
+    <!-- <script src="./src/script/filter.js"></script> -->
+</body>
+</html>

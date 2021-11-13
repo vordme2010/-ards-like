@@ -1,0 +1,208 @@
+.full-card {
+    position: absolute;
+    z-index: 20;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 40px;
+    box-shadow: 0 1px 2px rgb(173, 173, 173);
+    color: rgb(85, 85, 85);
+
+    &__buttons-wrapper {
+        position: absolute;
+        z-index: -1;
+        top: 53px;
+        right: 30px;
+    }
+    &__button {
+        position: absolute;
+        z-index: -1;
+        display: block;
+        width: 150px;
+        background-color: #fff;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0 2px 5px rgb(153, 153, 153);
+        text-align: end;
+        font-size: 25px;
+        font-family: 'Marck Script', cursive;
+        color: rgb(61, 74, 145);
+        transition: 500ms;
+
+
+        &:hover {
+            transition: 500ms;
+            margin-left: 10px;
+        }
+    }
+
+    &__button-down {
+        top: 40px;
+    }
+
+    &__save-btn-wrapper {
+        position: absolute;
+        top: 280px;
+        right: 28px;
+    }
+    &__button-save {
+
+        &:hover {
+            transition: 500ms;
+            padding-left: 10px;
+        }
+    }
+
+    
+
+    &__content-wrapper {
+        background-color: #fff;
+        border: solid 1px grey;
+        border-radius: 25px;
+        position: relative;
+        padding-bottom: 20px;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0;
+        text-align: center;
+        position: relative;
+        display: inline-block;
+        background-color: grey;
+        color: #fff;
+        width: 400px;
+        padding: 20px;
+        border-radius: 20px 0 0 0;
+
+        &::after {
+            content: " ";
+            position: absolute;
+            height: 100%;
+            width: 50px;
+            background: linear-gradient(125deg, grey 50%, rgba(255,255,255,1) 50%);
+            top: 0;
+            right: -40px;
+        }
+    }
+
+    &__subtitle {
+        margin: 0;
+        display: inline-block;
+        font-size: 24px;
+        font-weight: 700;
+        padding: 20px 0 20px 70px;
+    }
+
+    &__content-title {
+        margin: 0;
+        padding: 20px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    &__client-name {
+        position: absolute;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        padding: 15px;
+        background-color: grey;
+        right: 0;
+        top: 67px;
+
+        &::before {
+            content: " ";
+            position: absolute;
+            height: 100%;
+            width: 50px;
+            background: linear-gradient(125deg, rgba(255,255,255,1) 50%, grey 50%);
+            top: 0;
+            left: -45px;
+        }
+    }
+
+    &__info-container {
+        display: flex;
+    }
+
+    &__info-wrapper {
+        box-sizing: border-box;
+        padding: 20px;
+        width: 50%;
+    }
+
+    &__info-title {
+        display: inline-block;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    &__info-text {
+        display: inline-block;
+        font-size: 25px;
+        font-family: 'Marck Script', cursive;
+        color: rgb(61, 74, 145);
+        margin: 10px;
+    }
+
+    &__list-item {
+        font-family: 'Marck Script', cursive;
+        font-size: 20px;
+        color: rgb(61, 74, 145);
+        font-weight: 400;
+        margin-left: 15px;
+    }
+
+    &__cardiologist-bg {
+        background-color: $cardio-color;
+
+        &::after {
+            background: linear-gradient(125deg, $cardio-color 50%, rgba(255,255,255,1) 50%);
+        }
+        &::before {
+            background: linear-gradient(125deg, rgba(255,255,255,1) 50%, $cardio-color 50%);
+        }
+    }
+    &__cardiologist-border {
+        border: solid 1px $cardio-color;
+    }
+
+    &__dentist-bg {
+        background-color: $dentist-color;
+
+        &::after {
+            background: linear-gradient(125deg, $dentist-color 50%, rgba(255,255,255,1) 50%);
+        }
+        &::before {
+            background: linear-gradient(125deg, rgba(255,255,255,1) 50%, $dentist-color 50%);
+        }
+    }
+    &__dentist-border {
+        border: solid 1px $dentist-color;
+    }
+
+    &__therapist-bg {
+        background-color: $therapist-color;
+
+        &::after {
+            background: linear-gradient(125deg, $therapist-color 50%, rgba(255,255,255,1) 50%);
+        }
+        &::before {
+            background: linear-gradient(125deg, rgba(255,255,255,1) 50%, $therapist-color 50%);
+        }
+    }
+    &__therapist-border {
+        border: solid 1px $therapist-color;
+    }
+}
+
+.edit-input {
+    box-shadow: 0px 2px 3px rgba(158, 158, 158, 0.426);
+}
