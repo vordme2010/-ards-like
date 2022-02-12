@@ -1,14 +1,15 @@
-Step Project "Cards"
+Project "Cards"
 
 Учасники: 
-    Бельдюгин Евгений
-    Горбенко Ева
     Безкровный Иван
 
-Фрагменты написанные учасниками: 
+Фрагменты написанные студентами: 
 
-    Бельдюгин Евгений:
+    Безкровный Иван:
 
+        filter.js
+        методы : getToken и validateLogin в login-modal.js
+        validator.js
         дизайн + верстка
             header
             отботражение карточек
@@ -22,11 +23,7 @@ Step Project "Cards"
         visit.js
         visits-collection.js
         wait-function.js
-
-
-    Горбенко Ева:
-
-        доработка дизайна + верстка
+         доработка дизайна + верстка
             фильтры
             модальные окна + работа с инвутами
         доработка gulpfile.js 
@@ -39,13 +36,5 @@ Step Project "Cards"
         методы: addDiseases в visit-cardiologist.js
         методы: takeChangedValues в visit-dentist.js  
         методы: takeChangedValues в visit-therapist.js (совместно в Евгением)
-        методы: getVisits, removeVisit, checkVisitAsDone в visits-collection.js  ,  saveChanges (совместно в Евгением)
-
-        
-
-    Безкровный Иван:
-
-        filter.js
-        методы : getToken и validateLogin в login-modal.js
-        validator.js
+        методы: getVisits, removeVisit, checkVisitAsDone в visits-collection.js  ,  saveChanges
 
